@@ -25,7 +25,7 @@ object DayFour:
       val winningNumbers =
         d.findAllMatchIn(winningNumbersString).map(_.matched.toInt).toSeq
 
-      val index = "\\d+".r.findFirstIn(cardName).get.toInt
+      val index = d.findFirstIn(cardName).get.toInt
 
       InputLine(index - 1, winningNumbers, obtainedNumbers)
 
